@@ -64,11 +64,11 @@ class NeuralNetwork(object):
         #### Implement the forward pass here ####
         ### Forward pass ###
         # TODO: Hidden layer - Replace these values with your calculations.
-        hidden_inputs = np.dot(X , weights_input_to_hidden) # signals into hidden layer
+        hidden_inputs = np.dot(X , self.weights_input_to_hidden) # signals into hidden layer
         hidden_outputs = activation_function(hidden_inputs) # signals from hidden layer
 
         # TODO: Output layer - Replace these values with your calculations.
-        final_inputs = np.dot(hidden_outputs , weights_hidden_to_output) # signals into final output layer
+        final_inputs = np.dot(hidden_outputs , self.weights_hidden_to_output) # signals into final output layer
         final_outputs = activation_function(final_inputs) # signals from final output layer
         
         return final_outputs, hidden_outputs
@@ -127,11 +127,11 @@ class NeuralNetwork(object):
         
         #### Implement the forward pass here ####
         # TODO: Hidden layer - replace these values with the appropriate calculations.
-        hidden_inputs = np.dot(feature , weights_input_to_hidden) # signals into hidden layer
+        hidden_inputs = np.dot(feature , self.weights_input_to_hidden) # signals into hidden layer
         hidden_outputs = activation_function(hidden_inputs) # signals from hidden layer
         
         # TODO: Output layer - Replace these values with the appropriate calculations.
-        final_inputs = np.dot(hidden_inputs, weights_hidden_to_output) # signals into final output layer
+        final_inputs = np.dot(hidden_inputs, self.weights_hidden_to_output) # signals into final output layer
         final_outputs = activation_function(final_inputs) # signals from final output layer 
         
         return final_outputs
